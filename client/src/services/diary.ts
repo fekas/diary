@@ -9,7 +9,7 @@ export interface DiaryEntry {
   mood: string;
 }
 
-const API_BASE_URL = 'http://localhost:3001/api';
+const API_BASE_URL = 'http://localhost:3000/api';
 
 export const getDiaries = async (): Promise<DiaryEntry[]> => {
   const response = await axios.get(`${API_BASE_URL}/diaries`);
