@@ -2,13 +2,13 @@
 
 ## 项目概述
 
-项目采用前后端分离架构，使用React Native开发跨平台移动应用，Node.js + Express开发后端服务。
+项目采用前后端分离架构，使用React + TypeScript开发Web端应用，Node.js + Express开发后端服务。
 
 ## 目录结构
 
 ```
 diary/
-├── mobile/                 # 移动应用（React Native）
+├── client/                 # Web端应用（React + TypeScript）
 │   ├── src/
 │   │   ├── assets/        # 静态资源文件
 │   │   │   ├── images/    # 图片资源
@@ -18,12 +18,12 @@ diary/
 │   │   │   ├── common/    # 通用组件
 │   │   │   ├── editor/    # 编辑器相关组件
 │   │   │   └── diary/     # 日记相关组件
-│   │   ├── screens/       # 页面组件
+│   │   ├── pages/         # 页面组件
 │   │   │   ├── auth/      # 认证相关页面
 │   │   │   ├── diary/     # 日记相关页面
 │   │   │   ├── profile/   # 个人中心页面
 │   │   │   └── settings/  # 设置页面
-│   │   ├── navigation/    # 导航配置
+│   │   ├── routes/        # 路由配置
 │   │   ├── store/         # 状态管理
 │   │   │   ├── actions/   # Redux actions
 │   │   │   ├── reducers/  # Redux reducers
@@ -33,10 +33,9 @@ diary/
 │   │   ├── hooks/         # 自定义Hooks
 │   │   ├── constants/     # 常量定义
 │   │   └── config/        # 配置文件
+│   ├── public/            # 静态公共资源
 │   ├── tests/             # 测试文件
-│   ├── android/           # Android原生代码
-│   ├── ios/               # iOS原生代码
-│   └── docs/              # 移动端文档
+│   └── docs/              # 前端文档
 │
 ├── server/                 # 后端服务
 │   ├── src/
@@ -70,10 +69,10 @@ diary/
 
 ## 关键目录说明
 
-### mobile/src/
+### client/src/
 - `components/`: 可复用的UI组件
-- `screens/`: 应用的各个页面
-- `navigation/`: 路由导航配置
+- `pages/`: 应用的各个页面
+- `routes/`: 路由配置
 - `store/`: Redux状态管理
 - `services/`: API调用和数据处理
 - `utils/`: 工具函数和辅助方法

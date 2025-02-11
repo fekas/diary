@@ -1,0 +1,46 @@
+.calendar-container {
+  width: 100%;
+  padding: 24px;
+  background: var(--background-light);
+  border-radius: 8px;
+}
+
+.diary-calendar {
+  background: var(--background-light);
+  border-radius: 8px;
+}
+
+.diary-cell {
+  padding: 4px;
+}
+
+.diary-badge {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/* 响应式布局 */
+@media screen and (max-width: 768px) {
+  .calendar-container {
+    padding: 12px;
+  }
+
+  .diary-badge {
+    font-size: 11px;
+    line-height: 18px;
+  }
+}
+
+/* 暗色主题适配 */
+[data-theme="dark"] .calendar-container,
+[data-theme="dark"] .diary-calendar {
+  background: var(--background-dark);
+}
+
+[data-theme="dark"] .diary-badge {
+  color: rgba(255, 255, 255, 0.85);
+}
